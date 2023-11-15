@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sửa Nhân viên"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="#EF2112"
+        />
+    <EditText
+        android:id="@+id/edtHoTenSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Nhập họ tên"
+        />
+    <EditText
+        android:id="@+id/edtSoDienThoaiSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập số điện thoại"
+        android:inputType="number"
+        />
+    <EditText
+        android:id="@+id/edtEmailSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập email"
+        />
+
+    <EditText
+        android:id="@+id/edtChucVuSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập chức vụ"
+
+        />
+    <Button
+        android:id="@+id/btnSuaNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Chỉnh sửa"
+        android:textSize="20dp"
+        android:backgroundTint="#14DA1C"
+        />
+    <Button
+        android:id="@+id/btnHuaSuaNhanVien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Hủy"
+        android:textSize="20dp"
+        android:backgroundTint="#EA2415"
+        />
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/anh1"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        />
+   <Button
+       android:layout_marginTop="40dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/btntrangchu"
+       android:text="Trang chủ"
+       android:textSize="20dp"
+       android:textStyle="bold"
+       android:drawableLeft="@drawable/ic_home"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnthanhvien"
+        android:text="Quản lí thành viên"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_nhanvien"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnban"
+        android:text="Quản lí bàn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_table"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnthucdon"
+        android:text="Quản lí thực đơn"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_thucdon"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnbanchaynhat"
+        android:text="Bán chạy nhất"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_coffe"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDoanhthu"
+        android:text="Doanh thu"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_chart"/>
+
+</LinearLayout>
