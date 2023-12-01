@@ -2,7 +2,7 @@ package com.example.coffeeshop.DTO;
 
 public class NhanVien {
     int maNV;
-    String hoTen, sdt, email, taiKhoan, matKhau, loaiTaiKhoan;
+    String hoTen, sdt, email, tenDangNhap, matKhau, loaiTaiKhoan;
 
     public NhanVien() {
     }
@@ -12,7 +12,7 @@ public class NhanVien {
         this.hoTen = hoTen;
         this.sdt = sdt;
         this.email = email;
-        this.taiKhoan = taiKhoan;
+        this.tenDangNhap = taiKhoan;
         this.matKhau = matKhau;
         this.loaiTaiKhoan = loaiTaiKhoan;
     }
@@ -21,7 +21,7 @@ public class NhanVien {
         this.hoTen = hoTen;
         this.sdt = sdt;
         this.email = email;
-        this.taiKhoan = taiKhoan;
+        this.tenDangNhap = taiKhoan;
         this.matKhau = matKhau;
         this.loaiTaiKhoan = loaiTaiKhoan;
     }
@@ -67,11 +67,11 @@ public class NhanVien {
     }
 
     public String getTaiKhoan() {
-        return taiKhoan;
+        return tenDangNhap;
     }
 
     public void setTaiKhoan(String taiKhoan) {
-        this.taiKhoan = taiKhoan;
+        this.tenDangNhap = taiKhoan;
     }
 
     public String getMatKhau() {

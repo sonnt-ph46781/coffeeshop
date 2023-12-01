@@ -13,8 +13,9 @@
         android:id="@+id/tvTenHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Xin chao : Nguyen Trong Duc"
-        android:textSize="30dp"
+        android:text="WELCOME BACK"
+        android:gravity="center"
+        android:textSize="25dp"
         android:textColor="#FFFF"
         android:layout_gravity="center"
         />

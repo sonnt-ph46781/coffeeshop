@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.coffeeshop.DTO.NhanVien;
 import com.example.coffeeshop.Database.DbHelper;
@@ -103,5 +104,19 @@ public class NhanVienDao {
         else {
             return "";
         }
+    }
+    public boolean CapNhatMatkhau(String tenDangNhap, String passold, String passnew) {
+        SQLiteDatabase database = dbHeper.getWritableDatabase();
+        Cursor cursor = database.rawQuery("SELECT * FROM NHANVIEN WHERE tenDangNhap=? AND matKhau=?", new String[]{tenDangNhap, passold});
+        if (cursor.getCount() > 0) {
+            Log.d("CapNhatMatkhau", "Người dùng được tìm thấy. Thực hiện cập nhật mật khẩu.");
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("matKhau", passnew);
+            long check = database.update("NHANVIEN", contentValues, "tenDangNhap =?", new String[]{tenDangNhap});
+            if(check == -1)
+                return false;
+            return true;
+        }
+        return false;
     }
 }
