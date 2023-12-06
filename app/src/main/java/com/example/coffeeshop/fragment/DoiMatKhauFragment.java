@@ -3,6 +3,7 @@ package com.example.coffeeshop.fragment;
 import static android.content.Context.MODE_PRIVATE;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.coffeeshop.DAO.NhanVienDao;
+import com.example.coffeeshop.LoginActivity;
 import com.example.coffeeshop.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -44,12 +46,16 @@ public class DoiMatKhauFragment extends Fragment {
                         Toast.makeText(requireContext(), "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    SharedPreferences sharedPreferences = requireContext().getSharedPreferences("luuquyen", MODE_PRIVATE);
-                    String tenDangNhap = sharedPreferences.getString("tenDangNhap", "");
+                    SharedPreferences sharedPreferences = requireContext().getSharedPreferences("INFO", MODE_PRIVATE);
+                    String tenDangNhap = sharedPreferences.getString("userLogin", "");
+                    System.out.println("username : " + tenDangNhap);
                     NhanVienDao nhanVienDao = new NhanVienDao(requireContext());
                     boolean check = nhanVienDao.CapNhatMatkhau(tenDangNhap, passold, passnew);
                     if (check) {
                         Toast.makeText(requireContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(requireContext(), LoginActivity.class);
+                        startActivity(intent);
+                        requireActivity().finish();
                     } else {
                         Toast.makeText(requireContext(), "Cập nhật không thành công ,vui lòng kiểm tra lại", Toast.LENGTH_SHORT).show();
                     }

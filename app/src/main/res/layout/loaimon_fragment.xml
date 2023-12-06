@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
     >
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recycelLoaiMon"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatThemLoaiMon"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="#1BE823"
-        android:src="@drawable/ic_add"
+        android:text="THÊM LOẠI MÓN MỚI"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:gravity="center"
         />
-</RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập món mới"
+        android:id="@+id/edtthemloaimon"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/btnthemloaimon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH LOẠI MÓN"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rcvloaimon"/>
+
+</LinearLayout>

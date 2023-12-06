@@ -108,7 +108,7 @@ public class NhanVienDao {
     public boolean CapNhatMatkhau(String tenDangNhap, String passold, String passnew) {
         SQLiteDatabase database = dbHeper.getWritableDatabase();
         Cursor cursor = database.rawQuery("SELECT * FROM NHANVIEN WHERE tenDangNhap=? AND matKhau=?", new String[]{tenDangNhap, passold});
-        if (cursor.getCount() > 0) {
+        if (cursor.getCount() != 0) {
             Log.d("CapNhatMatkhau", "Người dùng được tìm thấy. Thực hiện cập nhật mật khẩu.");
             ContentValues contentValues = new ContentValues();
             contentValues.put("matKhau", passnew);
