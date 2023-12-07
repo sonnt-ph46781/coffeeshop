@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:src="@drawable/ic__ban"
+        android:layout_margin="10sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Bàn"
+        android:gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#03A9F4"
+        />
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhân viên ORDER"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#ff00"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnNhanVien"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Món"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#ff00"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnMon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền bàn"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ff00"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tiền"
+        android:id="@+id/edttienBan"/>
+</LinearLayout>

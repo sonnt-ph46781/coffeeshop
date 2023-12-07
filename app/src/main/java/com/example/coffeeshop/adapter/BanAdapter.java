@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,6 +56,14 @@ public class BanAdapter extends RecyclerView.Adapter<BanAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 BanDao banDao=new BanDao(context);
+                boolean kiemtra = banDao.thayDoiTrangThai(list.get(holder.getAdapterPosition()).getMaban());
+                if (kiemtra){
+                    list.clear();
+                    list.addAll(banDao.getDSban());
+                    notifyDataSetChanged();
+                }else {
+                    Toast.makeText(context, "Thay đổi trạng thái không thành công", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

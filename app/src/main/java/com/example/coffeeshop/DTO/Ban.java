@@ -3,23 +3,23 @@ package com.example.coffeeshop.DTO;
 public class Ban {
     private int maban;
     private int maNhanVien;
+    private String tenThanhVien;
     private int maMon;
+    private String tenMon;
     private int tinhTrang;
     private int tongTien;
-    private String tenThanhVien;
-    private String tenMon;
 
-    public Ban() {
+    public Ban(int maNhanVien, int maMon, int i, int tien) {
     }
 
-    public Ban(int maban, int maNhanVien, int maMon, int tinhTrang, int tongTien, String tenThanhVien, String tenMon) {
+    public Ban(int maban, int maNhanVien, String tenThanhVien, int maMon, String tenMon, int tinhTrang, int tongTien) {
         this.maban = maban;
         this.maNhanVien = maNhanVien;
+        this.tenThanhVien = tenThanhVien;
         this.maMon = maMon;
+        this.tenMon = tenMon;
         this.tinhTrang = tinhTrang;
         this.tongTien = tongTien;
-        this.tenThanhVien = tenThanhVien;
-        this.tenMon = tenMon;
     }
 
     public int getMaban() {
@@ -38,12 +38,28 @@ public class Ban {
         this.maNhanVien = maNhanVien;
     }
 
+    public String getTenThanhVien() {
+        return tenThanhVien;
+    }
+
+    public void setTenThanhVien(String tenThanhVien) {
+        this.tenThanhVien = tenThanhVien;
+    }
+
     public int getMaMon() {
         return maMon;
     }
 
     public void setMaMon(int maMon) {
         this.maMon = maMon;
+    }
+
+    public String getTenMon() {
+        return tenMon;
+    }
+
+    public void setTenMon(String tenMon) {
+        this.tenMon = tenMon;
     }
 
     public int getTinhTrang() {
@@ -60,21 +76,5 @@ public class Ban {
 
     public void setTongTien(int tongTien) {
         this.tongTien = tongTien;
-    }
-
-    public String getTenThanhVien() {
-        return tenThanhVien;
-    }
-
-    public void setTenThanhVien(String tenThanhVien) {
-        this.tenThanhVien = tenThanhVien;
-    }
-
-    public String getTenMon() {
-        return tenMon;
-    }
-
-    public void setTenMon(String tenMon) {
-        this.tenMon = tenMon;
     }
 }
