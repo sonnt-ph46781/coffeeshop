@@ -36,38 +36,46 @@ import java.util.HashMap;
 public class BanFragment extends Fragment {
     BanDao banDao;
     RecyclerView rcvban;
-
     ArrayList<Ban> list;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.ban_fragment,container,false);
+        View view = inflater.inflate(R.layout.ban_fragment, container, false);
         rcvban = view.findViewById(R.id.rcvban);
         FloatingActionButton floatthem = view.findViewById(R.id.floatthem);
+
+        // Khởi tạo RecyclerView và Adapter
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        rcvban.setLayoutManager(linearLayoutManager);
+        list = new ArrayList<>();
         BanAdapter banAdapter = new BanAdapter(getContext(), list);
         rcvban.setAdapter(banAdapter);
+
+        // Thu thập dữ liệu và cập nhật adapter
         databan();
+
         floatthem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDIgLOG();
-
             }
         });
+
         return view;
     }
-    private void databan(){
-        banDao= new BanDao(getContext());
-        list =banDao.getDSban();
-        if (list.isEmpty()) {
-            Log.d("BanFragment", "Dữ liệu trống");
+    private void databan() {
+        banDao = new BanDao(getContext());
+        list.clear(); // Xóa danh sách trước khi thêm dữ liệu
+        list.addAll(banDao.getDSban());
+        BanAdapter banAdapter = (BanAdapter) rcvban.getAdapter();
+        if (banAdapter != null) {
+            banAdapter.notifyDataSetChanged();
+        } else {
+            Log.e("BanFragment", "Adapter là null");
         }
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        rcvban.setLayoutManager(linearLayoutManager);
-        BanAdapter banAdapter = new BanAdapter(getContext(),list);
-        rcvban.setAdapter(banAdapter);
-        banAdapter.notifyDataSetChanged();
     }
+
+
     private void showDIgLOG(){
         AlertDialog.Builder builder= new AlertDialog.Builder(getContext());
         LayoutInflater layoutInflater = getLayoutInflater();

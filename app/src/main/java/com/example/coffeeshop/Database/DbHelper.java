@@ -37,7 +37,7 @@ public class DbHelper extends SQLiteOpenHelper {
 //        db.execSQL(dbocthd);
         db.execSQL("INSERT INTO LOAIMON VALUES (1,'Cà Phê'),(2,'Trà'),(3,'Trà sữa')");
         db.execSQL("INSERT INTO MON VALUES (1,'CÀ PHÊ ĐÁ',30000,1),(2,'TRÀ ĐÀO',35000,2),(3,'TRÀ SỮA NƯỚNG',25000,3)");
-        db.execSQL("INSERT INTO BAN VALUES(1,1,1,1,5000000),(2,2,2,2,9000000)");
+        db.execSQL("INSERT INTO BAN VALUES(1,1,1,1,5000000),(2,2,2,0,9000000)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

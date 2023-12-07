@@ -9,7 +9,13 @@ public class Ban {
     private int tinhTrang;
     private int tongTien;
 
+
+
     public Ban(int maNhanVien, int maMon, int i, int tien) {
+        this.maNhanVien = maNhanVien;
+        this.maMon = maMon;
+        this.tinhTrang =i ;
+        this.tongTien = tien;
     }
 
     public Ban(int maban, int maNhanVien, String tenThanhVien, int maMon, String tenMon, int tinhTrang, int tongTien) {
